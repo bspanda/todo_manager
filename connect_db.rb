@@ -1,5 +1,5 @@
 require "active_record"
-
+# connect database
 def connect_db!
   ActiveRecord::Base.establish_connection(
     host: "localhost",
