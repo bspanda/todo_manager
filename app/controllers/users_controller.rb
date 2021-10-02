@@ -2,7 +2,6 @@ class UsersController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    # render plain: "Hello, this is /todos! #{DateTime.now.to_s(:short)}"
     render plain: User.order(:name).map { |user| user.to_display_string }.join("\n")
   end
 
